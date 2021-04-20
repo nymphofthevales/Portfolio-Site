@@ -3,7 +3,9 @@
     <head>
         <title>nymphofthevales</title>
         <link href="./stylesheet.css" rel="stylesheet"></link>
-        <script src="script.js" defer></script>
+        <script src="./constructors.js"></script>
+        <script src="./page_data.js"></script>
+        <script src="./core_functionality.js" defer></script>
     </head>
     <body class="grid-parent">
         <header>
@@ -12,6 +14,7 @@
         </header>
         <nav id="navigator" class="hidden">
             <button id="about">About</button>
+            <button id="all">View All</button>
             <button id="games">Games + Apps</button>
             <button id="writing">Writings + Stories</button>
             <button id="art">Illustrations + Portraits</button>
@@ -19,31 +22,29 @@
         </nav>
         <button id="menu-button" tabindex="1"></button>
         <!--<button id="back-button"></button>-->
-        <main>
-            <h1 id="page-title">Writings + Stories</h1>
-            <button class="content-preview">
-                <div class="col1">
-                    <h2>Cities and Stillness</h2>
-                    <p>The city of Nen has no doors...<br><br>A short piece inspired by Italo Calvino's <i>Invisible Cities</i>.</p>
-                </div>
-                <div class="col2">
-                    <img class="preview-img"></img>
-                </div>
-            </button>
-            <button class="content-preview">
-                <div class="col1">
-                    <h2>Space Base 72A</h2>
-                    <p>A sci-fi platformer shooter made in a week-long game jam during February 2021.</p>
-                </div>
-                <div class="col2">
-                    <img class="preview-img"></img>
-                </div>
-            </button>
+        <main id="main">
+            <div id="page-frame">
+            </div>
         </main>
         <footer class="grid-parent">
-            <section class="col1"></section>
-            <section class="col2"></section>
-            <section class="footer-colspan">© Athena Abbott 2021</section>
+            <section class="footer-colspan">Unless otherwise stated, all images and text © Athena Abbott 2021</section>
+            <section class="col1 row2" id="media-links">
+                <p>Find me on:</p>
+                <a id="twitter-button" href="https://twitter.com/nymphofthevales" target="_blank">Twitter</a>
+                <a id="instagram-button" href="https://www.instagram.com/nymphofthevales/" target="_blank">Instagram</a>
+                <a id="patreon-button" href="https://patreon.com/nymphofthevales" target="_blank">Support me on Patreon!</a>
+            </section>
+            <section id="email-form" class="col2 row2">
+                <form action="email_form.js">
+                    <label for="email-input">Email</label>
+                    <input type="text" name="Email" id="email-input"></input>
+                    <label for="subject-input">Subject</label>
+                    <input type="text" name="Subject" id="subject-input"></input>
+                    <textarea name="message" id="message-input" value="">
+                    </textarea>
+                    <button id="submit-mail-form">Submit</button>
+                </form>
+            </section>
         </footer>
     </body>
 </html>
