@@ -19,20 +19,6 @@ games_apps.labyrinth.preview.setTitle("Keeper of the Labyrinth");
 games_apps.labyrinth.preview.description = "\"What the <span style=\"color: #a02090;\">labyrinth</span> contains is unstoppable. The only thing that can be done is to put time and space between it and us. That's my job, as Keeper of the Labyrinth.\"<br><br>An interactive fiction game about identity, self-discovery and learning to accept and overcome the flaws we find in ourselves."
 games_apps.labyrinth.preview.img("./media/labyrinth_logo.png")
 
-/*TESTING*/
-
-games_apps['asdf'] = new sitePage();
-games_apps.asdf.preview.setTitle("TEST");
-games_apps.asdf.preview.description = "\"What the <span style=\"color: #a02090;\">labyrinth</span> contains is unstoppable. The only thing that can be done is to put time and space between it and us. That's my job, as Keeper of the Labyrinth.\"<br><br>An interactive fiction game about identity, self-discovery and learning to accept and overcome the flaws we find in ourselves."
-games_apps.asdf.preview.img("./media/labyrinth_logo.png")
-
-games_apps['qwer'] = new sitePage();
-games_apps.qwer.preview.setTitle("TEST");
-games_apps.qwer.preview.description = "\"What the <span style=\"color: #a02090;\">labyrinth</span> contains is unstoppable. The only thing that can be done is to put time and space between it and us. That's my job, as Keeper of the Labyrinth.\"<br><br>An interactive fiction game about identity, self-discovery and learning to accept and overcome the flaws we find in ourselves."
-games_apps.qwer.preview.img("./media/labyrinth_logo.png")
-
-/*TESTING*/
-
 games_apps['space_base'] = new sitePage();
 games_apps.space_base.preview.setTitle("Space Base 72A");
 games_apps.space_base.preview.description = "A sci-fi platformer shooter made in a week-long game jam during February 2021.";
@@ -63,10 +49,10 @@ writings_stories.spring.preview.img("./media/spring.png")
 
 let about_page_html = `<h2 id="page-title">About the Artist</h2>
 <div id="about-page">
-<section class="col1 row1" id="about-image">
-    <img src="./content/self_portrait_icon.png"></img>
-</section>
-    <section class="col2 row1" id="about-description">
+    <section id="about-image">
+        <img src="./content/self_portrait_icon.png"/>
+    </section>
+    <section id="about-description">
         <p>Hello!<br><br>Welcome to my site! I'm a queer trans artist, programmer, and writer from Alberta, Canada. I love finding new ways to share stories and create experiences for others; through writing, games, animation, illustration... Combining these mediums and tools in new ways to create unique things brings me so much joy.
         <br>
         <br>
@@ -77,7 +63,7 @@ let about_page_html = `<h2 id="page-title">About the Artist</h2>
         Athena
         </p>
     </section>
-    <section class="colspan1-2 row2" id="process-info">
+    <section id="about-process">
         <h3>Process Info</h3>
         <p>For all my digital art and animation, I use Clip Studio Paint EX and a Wacom Intuos 7 tablet.<br><br>For writing and organizing larger projects, such as my <i>Keeper of the Labyrinth</i> game, I use Scrivener extensively, which has been an invaluable tool for me.<br><br>For my geometric tiled drawings and animations, I tend to plan the figures first on paper with compass and straightedge.</p>
     </section>
