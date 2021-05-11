@@ -124,18 +124,38 @@ main {
 }
 .content-preview {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    margin: 15px auto;
+    margin: 20px;
     padding: 20px;
-    width: 90%;
-    max-width: 800px;
-    height: auto;
-    text-align: left;
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 25vw;
+    min-width: 200px;
+    max-width: -moz-fit-content;
+    height: 100%;
+    text-align: center;
     font-size: 1rem;
     border: 2px inset;
     background-color: white;
+    display: inline-block;
 }
+.content-previews-frame {
+    margin: 0 auto;
+    width: fit-content;
+}
+.content-previews-frame p {
+    max-width: 30vw;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 0;
+}
+.content-previews-frame h2 {
+    margin: 0 auto 30px auto;
+}
+.content-previews div {
+    width: fit-content;
+    width: -moz-fit-content;
+}
+
 .content-preview:hover, .content-preview:focus {
     background-color: #eebb00;
 }
@@ -147,6 +167,15 @@ main p {
     margin: 10px 0;
     font-size: 0.9rem;
 }
+
+.preview-img {
+    height: auto;
+    margin: 0 auto 30px auto;
+    width: 100%;
+    max-width: 30vw;
+    border: 4px solid #011a1a;
+}
+
 
 .grid-parent {
     display: grid;
@@ -347,4 +376,3 @@ footer .col2 {
     background-color: #555555;
     color: white;
 }
-

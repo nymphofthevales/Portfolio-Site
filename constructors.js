@@ -26,13 +26,9 @@ contentPreview.prototype.img = function(url) {
 contentPreview.prototype.generateHtml = function() {
     if (this.has_img === true) {
         return `<button class="content-preview" id="${this._id}">
-    <div class="col1">
-        <h2>${this._title}</h2>
-        <p>${this.description}</p>
-    </div>
-    <div class="col2">
-        <img class="preview-img" href="${this.imgUrl}"></img>
-    </div>
+            <img class="preview-img" src="${this._imgUrl}"/>
+            <h2>${this._title}</h2>
+            <p>${this.description}</p>
     </button>`
     } else if (this.has_img === false) {
         return `<button class="content-preview" id="${this._id}">
@@ -55,10 +51,12 @@ sitePage.prototype.getContent = function() {
 
 function generateHtmlForPage(page) {
     page.parentPageContent.html = '';
-    page.parentPageContent.html += `<h2 id=\"page-title\">${page.parentPageContent.title}</h2>`
+    let pageid = page.parentPageContent.title.replace(/\s+/g, '');
+    page.parentPageContent.html += `<div id=\"${pageid}\"><h2 id=\"page-title\">${page.parentPageContent.title}</h2><div class="content-previews-frame">`
     for (let key in page) {
         if (key !== "parentPageContent") {
             page.parentPageContent.html += page[key].preview.generateHtml();
         }
     }
+    page.parentPageContent.html += `</div></div>`
 }
