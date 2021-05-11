@@ -18,6 +18,13 @@ games_apps['labyrinth'] = new sitePage();
 games_apps.labyrinth.preview.setTitle("Keeper of the Labyrinth");
 games_apps.labyrinth.preview.description = "\"What the <span style=\"color: #a02090;\">labyrinth</span> contains is unstoppable. The only thing that can be done is to put time and space between it and us. That's my job, as Keeper of the Labyrinth.\"<br><br>An interactive fiction game about identity, self-discovery and learning to accept and overcome the flaws we find in ourselves."
 games_apps.labyrinth.preview.img("./media/labyrinth_logo.png")
+games_apps.labyrinth.preview.destinationUrl = "./labyrinth/"
+
+games_apps['gradient'] = new sitePage();
+games_apps.gradient.preview.setTitle("Gradient Generator");
+games_apps.gradient.preview.description = "A javascript app for generating in-between hexadecimal values, forming a gradient between any two given hexadecimal or RGB colour codes."
+games_apps.gradient.preview.img("./media/gradient_thumbnail.png");
+games_apps.gradient.preview.destinationUrl = "./content/gradient/"
 
 games_apps['space_base'] = new sitePage();
 games_apps.space_base.preview.setTitle("Space Base 72A");

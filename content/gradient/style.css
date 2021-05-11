@@ -7,7 +7,7 @@ body {
   padding-top: 40px;
   text-align: center;
   font-size: medium;
-  font-family: Georgia;
+  font-family: 'Courier New', Courier, monospace;
 }
   
 div,section {
@@ -22,6 +22,7 @@ button {
     border: 2px #353535;
     border-style: outset;
     margin: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .button, #error-display {
@@ -37,7 +38,6 @@ button {
 #content {
     width: 70%;
     min-width: 600px;
-    /*height: 80vmax;*/
     margin-bottom: 100px;
 }
 
@@ -57,6 +57,7 @@ button {
 input, .form-label, select {
     display: block;
     margin: 5px auto;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .form-label {

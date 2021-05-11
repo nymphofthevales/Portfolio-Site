@@ -199,10 +199,15 @@ function errorText(type, place) {
 }
 
 function readForm() {
-  const initial = document.getElementById('valueOne').value;
-  const final = document.getElementById('valueTwo').value;
-  const type = document.getElementById('inputType').value;
-  const resolution = document.getElementById('resolution').value;
+  hexValuesInitial = [];
+  hexValuesFinal = [];
+  decimalValuesInitial = [];
+  decimalValuesFinal = [];
+  resultantGradient = [];
+  let initial = document.getElementById('valueOne').value;
+  let final = document.getElementById('valueTwo').value;
+  let type = document.getElementById('inputType').value;
+  let resolution = document.getElementById('resolution').value;
   const results = document.getElementById('results')
   const place = document.getElementById('error-text');
   if (initial === "" && final === "") {

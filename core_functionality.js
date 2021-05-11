@@ -89,7 +89,7 @@ function generateListeners(page) {
         }
     }
     for (let btn in buttons) {
-        buttons[btn].addEventListener('click',()=>{window.location.replace(page[btn].destinationUrl)});
+        buttons[btn].addEventListener('click',()=>{window.location.assign(page[btn].destinationUrl)});
     }
 }
 
