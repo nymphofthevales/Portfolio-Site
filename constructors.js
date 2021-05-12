@@ -5,6 +5,7 @@ function contentPreview() {
     this._imgUrl = "";
     this._id = "";
     this.destinationUrl = "";
+    this.action = undefined;
 }
 contentPreview.prototype.generateId = function(string) {
     let words = string.split(' ');
@@ -49,7 +50,7 @@ sitePage.prototype.getContent = function() {
     return this.html;
 };
 
-function generateHtmlForPage(page) {
+function generateHtmlForMainPage(page) {
     page.parentPageContent.html = '';
     let pageid = page.parentPageContent.title.replace(/\s+/g, '');
     page.parentPageContent.html += `<div id=\"${pageid}\"><h2 id=\"page-title\">${page.parentPageContent.title}</h2><div class="content-previews-frame">`

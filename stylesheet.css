@@ -49,6 +49,9 @@ nav {
     top: 0;
     z-index: 1;
 }
+p {
+    font-size: 1rem;
+}
 #menu-button {
     position: fixed;
     background-color: transparent;
@@ -178,6 +181,60 @@ main p {
     border: 4px solid #011a1a;
 }
 
+embed {
+    width: 60vw;
+    margin: 0 auto;
+    height: calc(calc(60vw / 8.5) * 11);
+}
+.embeded-content {
+    width: 60vw;
+    margin: 30px auto;
+    height: auto;
+}
+
+.project-page-frame {
+    width: 70vw;
+    min-width: 400px;
+    margin: 0 auto;
+}
+.project-page-frame p {
+    margin: 30px auto;
+    width: 70%;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+.project-page-frame h2,.project-page-frame h3 {
+    margin: 0 auto;
+    width: fit-content;
+    width: -moz-fit-content;
+}
+.project-page-frame img {
+    height: 400px;
+    margin: 30px auto 0 auto;
+    display: block;
+}
+.embed-fallback-link {
+    margin: 20px auto;
+    width: fit-content;
+    width: moz-fit-content;
+}
+.embed-fallback-link a {
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+.embed-fallback-link a:hover,.embed-fallback-link a:focus {
+    text-decoration: none;
+}
+.embed-fallback-link a:active {
+    color:#cc4444;
+    text-decoration: none;
+}
+.embed-fallback-link a:visited {
+    color:white;
+}
+
+
 
 .grid-parent {
     display: grid;
@@ -291,9 +348,6 @@ footer .col2 {
     margin: 20px;
 }
 
-#about-page p {
-    font-size: 1rem;
-}
 #about-description {
     width: 35vw;
     min-width: 300px;
@@ -304,6 +358,7 @@ footer .col2 {
 }
 #process-info p {
     width: 100%;
+    font-size: 1.2rem;
 }
 #media-links {
     margin: 0 auto;

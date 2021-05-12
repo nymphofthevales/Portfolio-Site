@@ -37,6 +37,8 @@ writings_stories['nen'] = new sitePage();
 writings_stories.nen.preview.setTitle("Cities and Stillness");
 writings_stories.nen.preview.description = "\"The city of Nen has no doors...\"<br><br>Flash fiction inspired by Italo Calvino's <i>Invisible Cities</i>."
 writings_stories.nen.preview.img("./media/cities_and_stillness.png");
+//writings_stories.nen.action = 'print self'
+writings_stories.nen.html = "<div class=\"project-page-frame\"><h2 class=\"page-title\">Cities and Stillness</h2><h3 class=\"page-title\">November 2020</h3><img src=\"./media/cities_and_stillness.png\"/><p>I first read Italo Calvino's <i>Invisible Cities</i> in early 2020, and I can hardly describe the effect it had on me. Ever since, I find I keep coming back to it, just flipping to a random page and reading aloud to myself, and each time I do I discover some new insight that I hadn't seen in it upon first reading. It's a marvelous book: The way the author plays with memory and perception and the very concept of stories, the way each of the cities seems to speak to some deeper truth about humanity, the beautiful language use and structure that places so much meaning into every physical aspect of the cities described, turning even the most seemingly mundane things into profound metaphor, ah! I took my time with it, end even then I couldn't get enough. My only lament is that I couldn't read it in the original Italian!</p><p>After reading it, I felt so inspired that I wished to write something in the same style, to capture a spark of what makes his depictions of cities so special to me. It is a feeble attempt, but it is mine–I believe it speaks for itself here.</p><section class=\"embed-fallback-link\"><a href=\"./content/writings/cities_and_stillness.pdf\" target=\"_blank\">View the pdf in a new tab here.</a></section><div class=\"embeded-content\"><embed type=\"application/pdf\" src=\"./content/writings/cities_and_stillness.pdf\"></div></div>"
 
 /*
 writings_stories['sincerity'] = new sitePage();
@@ -48,11 +50,13 @@ writings_stories['brine'] = new sitePage();
 writings_stories.brine.preview.setTitle("Beneath the Brine");
 writings_stories.brine.preview.description = "\"Monsters lurked in those depths, they said, in hushed tales told over gin in the seaside pubs. Stories only ever spoken while on land, of course. It was bad luck to harbour such ideas at sea—speak of the devil and he shalt appear, after all...\"<br><br>An adventure at sea, and a doomed romance."
 writings_stories.brine.preview.img("./media/beneath_the_brine.png")
+writings_stories.brine.html = "<div class=\"project-page-frame\"><h2 class=\"page-title\">Beneath the Brine</h2><h3 class=\"page-title\">April 2021</h3><img src=\"./media/beneath_the_brine.png\"/><section class=\"embed-fallback-link\"><a href=\"./content/writings/beneath_the_brine.pdf\" target=\"_blank\">View the pdf in a new tab here.</a></section><div class=\"embeded-content\"><embed type=\"application/pdf\" src=\"./content/writings/beneath_the_brine.pdf\"></div></div>"
 
 writings_stories['spring'] = new sitePage();
 writings_stories.spring.preview.setTitle("Spring");
 writings_stories.spring.preview.description = "\"The steady rhythm of pedalling helped distract Amber from the strange thoughts running through her head; she could tell herself that her rabbit-heart’s beat was only from exertion, that the flush in her face was only from the wind...\"<br><br>A short romance about a childhood friend, and biking out to see the sunset."
 writings_stories.spring.preview.img("./media/spring.png")
+writings_stories.spring.html = "<div class=\"project-page-frame\"><h2 class=\"page-title\">Spring</h2><h3 class=\"page-title\">March 2021</h3><img src=\"./media/spring.png\"/><section class=\"embed-fallback-link\"><a href=\"./content/writings/spring.pdf\" target=\"_blank\">View the pdf in a new tab here.</a></section><div class=\"embeded-content\"><embed type=\"application/pdf\" src=\"./content/writings/spring.pdf\"></div></div>"
 
 let about_page_html = `<h2 id="page-title">About the Artist</h2>
 <div id="about-page">

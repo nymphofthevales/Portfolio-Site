@@ -36,7 +36,7 @@ function print(page) {
         let totalHtml = about_page_html;
         totalHtml += '<hr>';
         for (let i=0; i<totalPages.length; i++) {
-            generateHtmlForPage(totalPages[i])
+            generateHtmlForMainPage(totalPages[i])
             totalHtml += totalPages[i].parentPageContent.html;
             totalHtml += '<hr>';
         }
@@ -46,7 +46,8 @@ function print(page) {
         }
         menu();
     } else {
-        generateHtmlForPage(page);
+        window.scroll(0,0);
+        generateHtmlForMainPage(page);
         pageFrame.innerHTML = page.parentPageContent.html
         setTimeout(()=>{
             generateListeners(page);
@@ -83,10 +84,33 @@ function menu() {
 function generateListeners(page) {
     for (let key in page) {
         if (key !== "parentPageContent") {
-            document.getElementById(page[key].preview._id).addEventListener('click',()=>{window.location.href = page[key].preview.destinationUrl})
+            if (page[key].preview.action === undefined && page[key].preview.destinationUrl !== "") {
+                document.getElementById(page[key].preview._id).addEventListener('click',()=>{
+                    window.location.href = page[key].preview.destinationUrl
+                    console.log('failed to place listener for action')
+                })
+            } else {
+                document.getElementById(page[key].preview._id).addEventListener('click',()=>{
+                    pageFrame.innerHTML = page[key].html;
+                    window.scroll(0,0);
+                })
+                /*document.getElementById(page[key].preview._id).addEventListener('click',()=>{
+                    handlePagePreviewAction(page[key])
+                    console.log('placed listener for action')
+                    pageFrame.innerHTML = page[key].html;
+                })*/
+            }
         }
     }
 }
+
+/*function handlePagePreviewAction(pageObject) {
+    if (pageObject.preview.action === 'print self') {
+        pageFrame.innerHTML = pageObject.html;
+    } else {
+        pageObject.preview.action(pageObject);
+    }
+}*/
 
 //set initial state
 //pageFrame.innerHTML = about_page_html;
