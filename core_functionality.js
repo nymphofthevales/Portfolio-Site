@@ -81,15 +81,10 @@ function menu() {
 };
 
 function generateListeners(page) {
-    let buttons = {};
     for (let key in page) {
         if (key !== "parentPageContent") {
-            buttons[key] = document.getElementById(`${page[key].preview._id}`);
-            console.log(buttons);
+            document.getElementById(page[key].preview._id).addEventListener('click',()=>{window.location.href = page[key].preview.destinationUrl})
         }
-    }
-    for (let btn in buttons) {
-        buttons[btn].addEventListener('click',()=>{window.location.assign(page[btn].destinationUrl)});
     }
 }
 
