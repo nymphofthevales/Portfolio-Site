@@ -25,6 +25,8 @@ nav_games.addEventListener('click',()=>{print(games_apps)})
 document.getElementById('menu-button').addEventListener('click',()=>{menu()})
 
 const navButtons = [nav_about,nav_games,nav_writing,nav_art,nav_animations];
+let totalPages = [games_apps,writings_stories,illustrations_portraits,animations_geometrics];
+
 
 function print(page) {
     console.log(page)
@@ -32,7 +34,6 @@ function print(page) {
         pageFrame.innerHTML = about_page_html;
         menu();
     } else if (page === "all") {
-        let totalPages = [games_apps,writings_stories,illustrations_portraits,animations_geometrics];
         let totalHtml = about_page_html;
         totalHtml += '<hr>';
         for (let i=0; i<totalPages.length; i++) {
@@ -84,35 +85,45 @@ function menu() {
 function generateListeners(page) {
     for (let key in page) {
         if (key !== "parentPageContent") {
-            if (page[key].preview.action === undefined && page[key].preview.destinationUrl !== "") {
+            if (page[key].preview.destinationUrl !== "") {
                 document.getElementById(page[key].preview._id).addEventListener('click',()=>{
                     window.location.href = page[key].preview.destinationUrl
-                    console.log('failed to place listener for action')
                 })
-            } else {
+            } /*else {
                 document.getElementById(page[key].preview._id).addEventListener('click',()=>{
                     pageFrame.innerHTML = page[key].html;
                     window.scroll(0,0);
                 })
-                /*document.getElementById(page[key].preview._id).addEventListener('click',()=>{
-                    handlePagePreviewAction(page[key])
-                    console.log('placed listener for action')
-                    pageFrame.innerHTML = page[key].html;
-                })*/
-            }
+            }*/
         }
     }
 }
 
-/*function handlePagePreviewAction(pageObject) {
-    if (pageObject.preview.action === 'print self') {
-        pageFrame.innerHTML = pageObject.html;
+function checkQueryString() {
+    let query = window.location.href.split('?')
+    if (query.length > 1) {
+        let queryAll = query[1].split('&')
+        for (let i = 0; i < queryAll.length; i++) {
+            let currentPair = queryAll[i].split('=');
+            console.log(currentPair)
+            if (currentPair[0] === 'page') {
+                for (let i=0; i < totalPages.length; i++) {
+                    for (let key in totalPages[i]) {
+                        console.log(key)
+                        if (key === currentPair[1]) {
+                            pageFrame.innerHTML = totalPages[i][key].html;
+                        }
+                    }
+                }
+            }
+        }
     } else {
-        pageObject.preview.action(pageObject);
+        menuShown = true;
+        print("all")
     }
-}*/
+}
+
 
 //set initial state
 //pageFrame.innerHTML = about_page_html;
-menuShown = true;
-print("all")
+checkQueryString();
