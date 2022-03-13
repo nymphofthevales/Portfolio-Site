@@ -11,7 +11,7 @@ html {
 body {
     width: 100vw;
     min-height: 100vh;
-    height: 100%;
+    height: auto;
     grid-template-rows: auto auto auto;
     background-color: #114444;
     color: white;
@@ -133,7 +133,6 @@ main {
     width: -moz-fit-content;
     max-width: 25vw;
     min-width: 400px;
-    max-width: -moz-fit-content;
     height: 100%;
     text-align: center;
     font-size: 1rem;
@@ -389,6 +388,10 @@ footer .col2 {
 #patreon-button {
     background-color: #cc8800;
     display: block;
+}
+#github-button {
+    display: inline;
+    background-color: #333355;
 }
 #email-form {
     padding-top: 30px;

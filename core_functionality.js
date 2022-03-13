@@ -11,10 +11,8 @@ const nav_all = document.getElementById('all')
 nav_all.addEventListener('click',()=>{print('all')})
 
 const nav_art = document.getElementById('art')
-nav_art.addEventListener('click',()=>{print(illustrations_portraits)})
+nav_art.addEventListener('click',()=>{print(visuals_art)})
 
-const nav_animations = document.getElementById('animations')
-nav_animations.addEventListener('click',()=>{print(animations_geometrics)})
 
 const nav_writing = document.getElementById('writing')
 nav_writing.addEventListener('click',()=>{print(writings_stories)})
@@ -24,8 +22,8 @@ nav_games.addEventListener('click',()=>{print(games_apps)})
 
 document.getElementById('menu-button').addEventListener('click',()=>{menu()})
 
-const navButtons = [nav_about,nav_games,nav_writing,nav_art,nav_animations];
-let totalPages = [games_apps,writings_stories,illustrations_portraits,animations_geometrics];
+const navButtons = [nav_about,nav_games,nav_writing,nav_art];
+let mainPages = [games_apps,writings_stories,visuals_art];
 
 
 function print(page) {
@@ -36,14 +34,14 @@ function print(page) {
     } else if (page === "all") {
         let totalHtml = about_page_html;
         totalHtml += '<hr>';
-        for (let i=0; i<totalPages.length; i++) {
-            generateHtmlForMainPage(totalPages[i])
-            totalHtml += totalPages[i].parentPageContent.html;
+        for (let i=0; i<mainPages.length; i++) {
+            generateHtmlForMainPage(mainPages[i])
+            totalHtml += mainPages[i].parentPageContent.html;
             totalHtml += '<hr>';
         }
         pageFrame.innerHTML = totalHtml;
-        for (let i=0; i<totalPages.length; i++) {
-            generateListeners(totalPages[i]);
+        for (let i=0; i<mainPages.length; i++) {
+            generateListeners(mainPages[i]);
         }
         menu();
     } else {
@@ -107,11 +105,11 @@ function checkQueryString() {
             let currentPair = queryAll[i].split('=');
             console.log(currentPair)
             if (currentPair[0] === 'page') {
-                for (let i=0; i < totalPages.length; i++) {
-                    for (let key in totalPages[i]) {
+                for (let i=0; i < mainPages.length; i++) {
+                    for (let key in mainPages[i]) {
                         console.log(key)
                         if (key === currentPair[1]) {
-                            pageFrame.innerHTML = totalPages[i][key].html;
+                            pageFrame.innerHTML = mainPages[i][key].html;
                         }
                     }
                 }
